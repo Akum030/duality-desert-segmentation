@@ -83,13 +83,15 @@ This loads the best weights from `models/segmentation_head_best.pth`, runs infer
 
 ## Results
 
-Our best model (v3, epoch 15) achieves:
+### Final Submission Summary — Team Aidhunik
 
-| Metric         | Baseline (v1, epoch 9) | Best (v3, epoch 15) |
-|----------------|------------------------|----------------------|
-| Val IoU        | 0.2305                 | **0.3903**           |
-| Val Dice       | 0.3633                 | **~0.5615**          |
-| Val Accuracy   | 0.6608                 | **0.8120**           |
+**Best Model Results (v3 FPN, Epoch 15 of 30)**
+
+| Metric       | Baseline (v1, Ep 9) | Best (v3, Ep 15) | Δ        |
+|--------------|---------------------|------------------|----------|
+| Val IoU      | 0.2305              | **0.3903**       | +69.6%   |
+| Val Dice     | 0.3633              | **~0.5615**      | +54.6%   |
+| Val Accuracy | 0.6608              | **0.8120**       | +22.9%   |
 
 That is roughly a **+70% relative improvement in IoU** over our starting baseline.
 
