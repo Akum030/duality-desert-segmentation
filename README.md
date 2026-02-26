@@ -93,6 +93,17 @@ Our best model (v3, epoch 15) achieves:
 
 That is roughly a **+70% relative improvement in IoU** over our starting baseline.
 
+
+## Model Weights
+
+The trained checkpoint (, ~120 MB) is not in the repo because it exceeds GitHub's 100 MB per-file limit and Git LFS is not available on this instance.
+
+To get the weights, either:
+1. **Re-train from scratch** — run  (takes ~50 min on a T4 GPU for 15 epochs)
+2. **Request from us** — open an issue or contact us and we will share a download link
+
+The checkpoint format is a Python dict: 
+
 ## Notes
 
 - The dataset belongs to the hackathon organisers and is not redistributed here.
