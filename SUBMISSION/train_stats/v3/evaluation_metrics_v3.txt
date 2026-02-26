@@ -1,0 +1,41 @@
+TRAINING RESULTS — v3 (FPN + Multi-Scale ResNet50)
+======================================================================
+
+Architecture : ResNet50MultiScale (frozen stem/layer1/2, fine-tuned layer3+4) + FPNSegHead
+Loss         : CrossEntropyLoss (class-weighted, label_smooth=0.05) + 0.5 * SoftDice
+Optimizer    : AdamW  |  LR_head=5e-4, LR_backbone=5e-5
+Scheduler    : CosineAnnealingWarmRestarts(T_0=10)
+Epochs run   : 15 / 30 (training stopped early for deadline submission)
+
+Final Metrics (Epoch 15):
+  Final Val Loss          : 1.7940
+  Final Val IoU           : 0.3903
+  Final Val Dice (est.)   : 0.5615
+  Final Val Accuracy      : 0.8120
+
+Best Epoch Results:
+  Best Val IoU            : 0.3903  (Epoch 15)
+  Best Val Dice (est.)    : 0.5615  (Epoch 15)
+  Best Val Accuracy       : 0.8140  (Epoch 11)
+  Lowest Val Loss         : 1.7850  (Epoch 11)
+
+======================================================================
+Per-Epoch History:
+------------------------------------------------------------------------------------------
+Epoch    Train Loss   Val Loss     Val IoU    Val Dice(est)  Val Acc   
+------------------------------------------------------------------------------------------
+1        1.8570       1.9280       0.2842     0.4426         0.7550    
+2        1.6370       1.9010       0.3003     0.4619         0.7600    
+3        1.5890       1.8500       0.3319     0.4984         0.7910    
+4        1.5470       1.8360       0.3426     0.5104         0.7880    
+5        1.5190       1.8260       0.3550     0.5240         0.8010    
+6        1.4760       1.8140       0.3667     0.5366         0.8050    
+7        1.4800       1.8100       0.3723     0.5426         0.8060    
+8        1.4530       1.7980       0.3789     0.5496         0.8100    
+9        1.4510       1.7950       0.3867     0.5577         0.8130    
+10       1.4410       1.7890       0.3830     0.5539         0.8130    
+11       1.4350       1.7850       0.3850     0.5560         0.8140    
+12       1.4750       1.8040       0.3700     0.5401         0.8060    
+13       1.4690       1.7990       0.3780     0.5486         0.8070    
+14       1.4620       1.7970       0.3850     0.5560         0.8090    
+15       1.4440       1.7940       0.3903     0.5615         0.8120    

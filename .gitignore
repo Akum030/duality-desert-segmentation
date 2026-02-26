@@ -1,0 +1,42 @@
+# Datasets (never committed)
+Offroad_Segmentation_Training_Dataset/
+Offroad_Segmentation_testImages/
+
+# Virtual environments
+venv/
+env/
+edu_env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Logs and temp files
+*.log
+nohup.out
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights at root (canonical copy is in models/)
+segmentation_head*.pth
+
+# Large output dirs
+Offroad_Segmentation_testImages/Predicted_Masks*/
+outputs_test/
+
+# Model weights (too large for git, use Git LFS or share via link)
+models/*.pth
+SUBMISSION/models/*.pth
